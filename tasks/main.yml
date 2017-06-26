@@ -1,0 +1,20 @@
+---
+
+- name: Download Vagrant x86_64 package for Debian OS family
+  get_url:
+    url: "https://releases.hashicorp.com/vagrant/{{vagrant_version}}/vagrant_{{vagrant_version}}_x86_64.deb"
+    dest: /var/tmp/vagrant-x86_64.deb
+  when:
+    - ansible_os_family == 'Debian'
+    - ansible_architecture == 'x86_64'
+  tags:
+    - vagrant
+
+- name: Install Vagrant x86_64 package for Debian OS family
+  apt:
+    deb: /var/tmp/vagrant-x86_64.deb
+  when:
+    - ansible_os_family == 'Debian'
+    - ansible_architecture == 'x86_64'
+  tags:
+    - vagrant
