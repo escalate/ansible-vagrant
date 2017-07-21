@@ -18,3 +18,13 @@
     - ansible_architecture == 'x86_64'
   tags:
     - vagrant
+
+- name: Install additional Vagrant plugins per user
+  command: "vagrant plugin install {{item.1}}"
+  become: yes
+  become_user: "{{item.0.user}}"
+  with_subelements:
+    - "{{vagrant_plugins_per_user}}"
+    - packages
+  tags:
+    - vagrant

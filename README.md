@@ -1,2 +1,2 @@
 # ansible-vagrant
-Manage HashiCorp Vagrant installation
+Manage HashiCorp Vagrant and plugins installation

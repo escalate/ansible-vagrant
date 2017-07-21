@@ -1,6 +1,6 @@
 galaxy_info:
   author: Felix Boerner
-  description: Manage HashiCorp Vagrant installation
+  description: Manage HashiCorp Vagrant and plugins installation
   company: Felix Boerner
   license: MIT
   min_ansible_version: 2.3
@@ -11,4 +11,6 @@ galaxy_info:
        - xenial
   galaxy_tags:
     - vagrant
+    - plugin
+    - plugins
 dependencies: []
