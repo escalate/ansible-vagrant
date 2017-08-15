@@ -1,4 +1,5 @@
 ---
 
 vagrant_version: 1.9.5
-vagrant_plugins_per_user: []
+vagrant_user:
+vagrant_plugins: []
